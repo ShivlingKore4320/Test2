@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2</title>
+    <style>
+        body{
+            /* background-color: rgb(197, 199, 160); */
+            margin-bottom: 400px;
+            width: fit-content;
+            /* height: fit-content; */
+            height: 400px;
+            
+        }
+        #bd{
+            background-color: rgb(197, 199, 160);
+        }
+        h1{
+            height: 4ch;
+            /* text-align: center; */
+            padding-top: 12px;
+            background-color: rgb(186, 186, 73);
+        }
+        h3{
+            text-align: center;
+            height: 4ch;
+            /* text-align: center; */
+            padding-top: 12px;
+            background-color: rgb(186, 186, 73);
+        }
+        #Copyright{
+            background-color: rgb(186, 186, 73);
+            height: 5ch;
+            padding-top: 10px;
+            
+        }
+        #rr{
+            /* text-align: center; */
+            position: absolute;
+            left: 120px;
+            width: 500px;
+            height: 120px;
+            /* border: 3px solid green; */
+        }
+        p.b {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div id="bd">
+        <h1>Using File VersionInfo</h1> 
+       
+     Getting the version number of any managed/unmanaged 
+    DLL or executable in .NET 1.0, if I recall correctly, 
+    required some magic incantations with PInvoke.<br> <br>
+    I just discovered the File VersionInfo class from System.Diagnostics: <br><br>
+    File VersionInfo versionInfo; versionInfo - File VersionInfo.GetVersionInfo
+    (@"e:\win2003\system32\svchost.exe"); MessageBox.Show(versionInfo.ToString());<br><br>
+    To use the class then, all you need to do is: <br><br>
+    1. Invoke the static GetVersionInfo method. 2. Start using the properties of the resulting object <br><br>
+
+    File version is a 64 bit number. <br><br>
+
+    The first 16 bits are the major number <br><br>
+
+    The next 16 bits are the minor number <br><br>
+
+    The third set of 16 bits are the build number The last 16 bits are the private build number <br><br>
+
+    <div id="Copyright">(c) 2005 Copyright notice</div> 
+
+    </div>
+    
+    <br><br>
+
+    <div id="bd"> 
+        <h3>Using File VersionInfo</h3>   
+    Getting the version number of any managed/unmanaged 
+    DLL or executable in .NET 1.0, if I recall correctly, 
+    required some magic incantations with PInvoke.<br>
+    I just discovered the File VersionInfo class from System.Diagnostics: <br><br>
+    <div id="rr" style="font-family:'Courier New'">File VersionInfo versionInfo;<br> versionInfo - File VersionInfo.GetVersionInfo
+        (@"e:\win2003\system32\svchost.exe");<br> MessageBox.Show(versionInfo.ToString());</div>
+        <br><br><br><br><br>
+    
+    To use the class then, all you need to do is: <br>
+    <ol>
+        <i class="b"> 
+        <li>Invoke the static GetVersionInfo method.</li>
+        <li>Start using the properties of the resulting object.</li></i>
+    </ol>
+     <br>   
+    File version is a 64 bit number.
+    <ul>
+        <li>The first 16 bits are the major number</li>
+        <li>The next 16 bits are the minor number</li>
+        <li>The third set of 16 bits are the build number </li>
+        <li>The last 16 bits are the private build number </li>
+
+
+    </ul>
+    <strong>
+        <div id="Copyright">(c) 2005 Copyright notice</div> 
+    </strong>
+    
+
+    </div>
+</body>
+</html>
